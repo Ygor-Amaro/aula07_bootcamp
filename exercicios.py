@@ -51,22 +51,37 @@
 
 # 4 - Converter Celsius para Fahrenheit em uma Lista
 
-celsius = float(input("Digite a temperatura em Celsius: "))
+# celsius = float(input("Digite a temperatura em Celsius: "))
 
-def celsius_para_fahrenheit(celsius: float) -> float:
-    """
-    Converte uma temperatura de Celsius para Fahrenheit.
-    Parâmetros:
-        celsius (float): Temperatura em Celsius.
-    Retorna:
-        float: Temperatura em Fahrenheit.
-    """
-    return (celsius * 9/5) + 32
+# def celsius_para_fahrenheit(celsius: float) -> float:
+#     """
+#     Converte uma temperatura de Celsius para Fahrenheit.
+#     Parâmetros:
+#         celsius (float): Temperatura em Celsius.
+#     Retorna:
+#         float: Temperatura em Fahrenheit.
+#     """
+#     return (celsius * 9/5) + 32
 
-print(f"Temperatura em Fahrenheit: {celsius_para_fahrenheit(celsius)}")
+# print(f"Temperatura em Fahrenheit: {celsius_para_fahrenheit(celsius)}")
 
 # 5 - Calcular Desvio Padrão de uma Lista
+teste = [1, 2, 4, 8, 16, 32, 64, 128]
 
+def desvio_padrao(lista: list[float]) -> float:
+    """
+    Calcula o desvio padrão de uma lista de números.
+    Parâmetros:
+        lista (list): Lista de números.
+    Retorna:
+        float: Desvio padrão dos números na lista.
+    """
+    if not lista:
+        return 0
+    media = sum(lista) / len(lista)
+    variancia = sum((x - media) ** 2 for x in lista) / len(lista)
+    return round(variancia ** 0.5, 2)
 
+print(desvio_padrao(teste))
 # 6 - Encontrar Valores Ausentes em uma Sequência
 
