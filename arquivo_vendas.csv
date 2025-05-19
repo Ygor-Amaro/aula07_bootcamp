@@ -1,0 +1,11 @@
+produto,quantidade,preco,status venda
+Notebook,15,3599.90,True
+Mouse Gamer,42,199.50,True
+Teclado Mecânico,23,499.99,True
+Monitor 24",8,899.00,False
+Headphone Bluetooth,31,299.90,True
+Webcam Full HD,12,349.50,True
+SSD 1TB,19,399.99,False
+Impressora Laser,5,1299.00,True
+Smartphone,27,2199.90,True
+Tablet,11,999.50,False
