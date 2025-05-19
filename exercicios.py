@@ -66,22 +66,35 @@
 # print(f"Temperatura em Fahrenheit: {celsius_para_fahrenheit(celsius)}")
 
 # 5 - Calcular Desvio Padrão de uma Lista
-teste = [1, 2, 4, 8, 16, 32, 64, 128]
+# teste = [1, 2, 4, 8, 16, 32, 64, 128]
 
-def desvio_padrao(lista: list[float]) -> float:
+# def desvio_padrao(lista: list[float]) -> float:
+#     """
+#     Calcula o desvio padrão de uma lista de números.
+#     Parâmetros:
+#         lista (list): Lista de números.
+#     Retorna:
+#         float: Desvio padrão dos números na lista.
+#     """
+#     if not lista:
+#         return 0
+#     media = sum(lista) / len(lista)
+#     variancia = sum((x - media) ** 2 for x in lista) / len(lista)
+#     return round(variancia ** 0.5, 2)
+
+# print(desvio_padrao(teste))
+
+# 6 - Encontrar Valores Ausentes em uma Sequência
+teste = [1, 2, 4, 8, 16]
+
+def encontrar_ausentes(lista: list[int]) -> list[int]:
     """
-    Calcula o desvio padrão de uma lista de números.
+    Encontra os valores ausentes em uma sequência de números.
     Parâmetros:
         lista (list): Lista de números.
     Retorna:
-        float: Desvio padrão dos números na lista.
+        list: Lista com os valores ausentes.
     """
-    if not lista:
-        return 0
-    media = sum(lista) / len(lista)
-    variancia = sum((x - media) ** 2 for x in lista) / len(lista)
-    return round(variancia ** 0.5, 2)
+    return [x for x in range(min(lista), max(lista) + 1) if x not in lista]
 
-print(desvio_padrao(teste))
-# 6 - Encontrar Valores Ausentes em uma Sequência
-
+print(f"Valores ausentes: {encontrar_ausentes(teste)}")
