@@ -35,22 +35,35 @@
 # print(filtro(teste, 3.5))
 
 # 3 - Contar Valores Únicos em uma Lista
-teste = [1, 2, 3.2, 4, 5, 1, 2, 3, 0.5, 0.3]
+# teste = [1, 2, 3.2, 4, 5, 1, 2, 3, 0.5, 0.3]
 
-def contar_unicos(lista: list[float]) -> list[float]:
-    """
-    Conta os valores únicos em uma lista.
-    Parâmetros:
-        lista (list): Lista de números.
-    Retorna:
-        list: Lista com os valores únicos.
-    """
-    return sorted(list(set(lista)))
+# def contar_unicos(lista: list[float]) -> list[float]:
+#     """
+#     Conta os valores únicos em uma lista.
+#     Parâmetros:
+#         lista (list): Lista de números.
+#     Retorna:
+#         list: Lista com os valores únicos.
+#     """
+#     return sorted(list(set(lista)))
 
-print(f"Valores únicos: {contar_unicos(teste)}")
+# print(f"Valores únicos: {contar_unicos(teste)}")
 
 # 4 - Converter Celsius para Fahrenheit em uma Lista
 
+celsius = float(input("Digite a temperatura em Celsius: "))
+
+def celsius_para_fahrenheit(celsius: float) -> float:
+    """
+    Converte uma temperatura de Celsius para Fahrenheit.
+    Parâmetros:
+        celsius (float): Temperatura em Celsius.
+    Retorna:
+        float: Temperatura em Fahrenheit.
+    """
+    return (celsius * 9/5) + 32
+
+print(f"Temperatura em Fahrenheit: {celsius_para_fahrenheit(celsius)}")
 
 # 5 - Calcular Desvio Padrão de uma Lista
 
