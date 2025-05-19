@@ -19,23 +19,35 @@
 
 # 2 - Filtrar Dados Acima de um Limite
 
-teste = [1, 2, 3, 4, 5]
+# teste = [1, 2, 3, 4, 5]
 
-def filtro(lista: list[float], limite: float) -> list[float]:
-    """
-    Filtra os valores de uma lista que estão acima de um limite.
-    Parâmetros:
-        lista (list): Lista de números.
-        limite (float): Limite para filtrar os números.
-    Retorna:
-        list: Lista com os números acima do limite.
-    """
-    return [x for x in lista if x > limite]
+# def filtro(lista: list[float], limite: float) -> list[float]:
+#     """
+#     Filtra os valores de uma lista que estão acima de um limite.
+#     Parâmetros:
+#         lista (list): Lista de números.
+#         limite (float): Limite para filtrar os números.
+#     Retorna:
+#         list: Lista com os números acima do limite.
+#     """
+#     return [x for x in lista if x > limite]
 
-print(filtro(teste, 3.5))
+# print(filtro(teste, 3.5))
 
 # 3 - Contar Valores Únicos em uma Lista
+teste = [1, 2, 3.2, 4, 5, 1, 2, 3, 0.5, 0.3]
 
+def contar_unicos(lista: list[float]) -> list[float]:
+    """
+    Conta os valores únicos em uma lista.
+    Parâmetros:
+        lista (list): Lista de números.
+    Retorna:
+        list: Lista com os valores únicos.
+    """
+    return sorted(list(set(lista)))
+
+print(f"Valores únicos: {contar_unicos(teste)}")
 
 # 4 - Converter Celsius para Fahrenheit em uma Lista
 
